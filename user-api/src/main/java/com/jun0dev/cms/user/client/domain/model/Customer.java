@@ -34,6 +34,8 @@ public class Customer extends BaseEntity{
     private String verificationCode;
     private Boolean verify = false;
 
+    private Integer balance;
+
     public static Customer from(SignUpForm form) {
         return Customer.builder()
                 .email(form.getEmail().toLowerCase(Locale.ROOT))
