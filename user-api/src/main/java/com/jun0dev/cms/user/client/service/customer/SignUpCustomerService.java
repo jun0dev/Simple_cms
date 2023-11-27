@@ -1,4 +1,4 @@
-package com.jun0dev.cms.user.client.service;
+package com.jun0dev.cms.user.client.service.customer;
 
 import com.jun0dev.cms.user.client.domain.SignUpForm;
 import com.jun0dev.cms.user.client.domain.model.Customer;
@@ -34,8 +34,7 @@ public class SignUpCustomerService {
 
         if (customer.getVerify()) {
             throw new CustomException(ErrorCode.ALREADY_VERIFY);
-        }
-        else if (!customer.getVerificationCode().equals(code)) {
+        } else if (!customer.getVerificationCode().equals(code)) {
             throw new CustomException(ErrorCode.WRONG_VERIFICATION);
         } else if (customer.getVerifyExpiredAt().isBefore(LocalDateTime.now())) {
             throw new CustomException(ErrorCode.EXPIRE_CODE);

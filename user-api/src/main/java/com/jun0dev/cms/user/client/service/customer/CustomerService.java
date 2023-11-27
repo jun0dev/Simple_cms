@@ -1,4 +1,4 @@
-package com.jun0dev.cms.user.client.service;
+package com.jun0dev.cms.user.client.service.customer;
 
 import com.jun0dev.cms.user.client.domain.model.Customer;
 import com.jun0dev.cms.user.client.repository.CustomerRepository;
