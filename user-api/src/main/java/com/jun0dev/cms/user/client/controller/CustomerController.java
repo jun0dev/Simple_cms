@@ -6,7 +6,7 @@ import com.jun0dev.cms.user.client.domain.model.Customer;
 import com.jun0dev.cms.user.client.exception.CustomException;
 import com.jun0dev.cms.user.client.exception.ErrorCode;
 import com.jun0dev.cms.user.client.service.CustomerBalanceService;
-import com.jun0dev.cms.user.client.service.CustomerService;
+import com.jun0dev.cms.user.client.service.customer.CustomerService;
 import com.jun0dev.config.JwtAuthenticationProvider;
 import com.jun0dev.domain.common.UserVo;
 import lombok.RequiredArgsConstructor;

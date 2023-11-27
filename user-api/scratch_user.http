@@ -1,0 +1,53 @@
+### 회원가입 ( 고객 )
+POST http://localhost:8081/signUp/customer
+Content-Type: application/json
+
+{
+"birth": "1998-12-13",
+"email": "jun0dev@icloud.com",
+"name": "junyeong",
+"password": "pw",
+"phone": "01012345678"
+}
+
+### 이메일 인증 ( 고객 )
+GET http://localhost:8081/signUp/customer/verify?email=jun0dev@icloud.com&code=XCybB4HyK7
+
+### 로그인 ( 고객 )
+POST http://localhost:8081/signIn/customer
+Content-Type: application/json
+
+{
+  "email": "jun0dev@icloud.com",
+  "password": "pw"
+}
+
+### 회원 정보 조회 ( 고객 )
+GET http://localhost:8081/customer/getInfo
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ6ZE4yb0ZYOTFXUW9WbG14cVdwWGdBaXB1RjczQVI4MmpNSnlRQUcyRjRjPSIsImp0aSI6IlJETko4ZFJTMGJGYmFEMHJZaDNQZ3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE3MDEwNzEwNTQsImV4cCI6MTcwMTE1NzQ1NH0.6D5Fsm8IPcqNpkWvCqMPGEUket2IpIDfGvLthf5JOds
+
+### 잔액 변경 ( 고객 )
+POST http://localhost:8081/customer/balance
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ6ZE4yb0ZYOTFXUW9WbG14cVdwWGdBaXB1RjczQVI4MmpNSnlRQUcyRjRjPSIsImp0aSI6IlJETko4ZFJTMGJGYmFEMHJZaDNQZ3c9PSIsInJvbGVzIjoiQ1VTVE9NRVIiLCJpYXQiOjE3MDEwNzEwNTQsImV4cCI6MTcwMTE1NzQ1NH0.6D5Fsm8IPcqNpkWvCqMPGEUket2IpIDfGvLthf5JOds
+
+{
+  "from": "server",
+  "message": "돈 충전",
+  "money" : 100
+}
+
+### 회원가입( 셀러 )
+POST http://localhost:8081/signUp/seller
+Content-Type: application/json
+
+{
+  "birth": "1998-12-13",
+  "email": "jun0dev@icloud.com",
+  "name": "junyeong",
+  "password": "pw",
+  "phone": "01012345678"
+}
+### 이메일 인증 ( 고객 )
+GET http://localhost:8081/signUp/seller/verify?email=jun0dev@icloud.com&code=lpDNoRQRtv

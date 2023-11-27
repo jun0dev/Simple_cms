@@ -2,13 +2,12 @@ package com.jun0dev.cms.user.client.controller;
 
 import com.jun0dev.cms.user.client.application.SignUpApplication;
 import com.jun0dev.cms.user.client.domain.SignUpForm;
-import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/signup")
+@RequestMapping("/signUp")
 @RequiredArgsConstructor
 public class SignUpController {
 
