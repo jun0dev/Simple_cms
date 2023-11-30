@@ -26,3 +26,35 @@ X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ6ZE4yb0ZYOTFXUW9WbG14cVdwWGdBaXB1R
   "price": 100000,
   "count": 1
 }
+
+### 상품 수정
+PUT http://localhost:8082/seller/product
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ6ZE4yb0ZYOTFXUW9WbG14cVdwWGdBaXB1RjczQVI4MmpNSnlRQUcyRjRjPSIsImp0aSI6IlJETko4ZFJTMGJGYmFEMHJZaDNQZ3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNzAxMzE3MzkzLCJleHAiOjE3MDE0MDM3OTN9.z6tzJ2Rk5bLLKyQ65bseDH02N9PtUxoPt5JWScJncMo
+
+{
+  "name": "Air jordan 1",
+  "description": "새로운 신발",
+  "id": 1,
+  "items": [
+    {
+      "id": 1,
+      "count": 3,
+      "name": "280",
+      "price": 200000
+    }
+  ]
+}
+
+### 상품 아이템 수정
+PUT http://localhost:8082/seller/product/item
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ6ZE4yb0ZYOTFXUW9WbG14cVdwWGdBaXB1RjczQVI4MmpNSnlRQUcyRjRjPSIsImp0aSI6IlJETko4ZFJTMGJGYmFEMHJZaDNQZ3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNzAxMzE3MzkzLCJleHAiOjE3MDE0MDM3OTN9.z6tzJ2Rk5bLLKyQ65bseDH02N9PtUxoPt5JWScJncMo
+
+{
+  "id": 1,
+  "count": 5,
+  "name": "300",
+  "price": 150000
+}
+
