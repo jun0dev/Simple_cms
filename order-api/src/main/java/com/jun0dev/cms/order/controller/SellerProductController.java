@@ -1,9 +1,6 @@
 package com.jun0dev.cms.order.controller;
 
-import com.jun0dev.cms.order.domain.product.AddProductForm;
-import com.jun0dev.cms.order.domain.product.AddProductItemForm;
-import com.jun0dev.cms.order.domain.product.ProductDto;
-import com.jun0dev.cms.order.domain.product.ProductItemDto;
+import com.jun0dev.cms.order.domain.product.*;
 import com.jun0dev.cms.order.service.ProductItemService;
 import com.jun0dev.cms.order.service.ProductService;
 import com.jun0dev.config.JwtAuthenticationProvider;
@@ -33,5 +30,20 @@ public class SellerProductController {
 
 
         return ResponseEntity.ok(ProductDto.from(productItemService.addProductItem(provider.getUserVo(token).getId(), form)));
+    }
+
+    @PutMapping
+    public ResponseEntity<ProductDto> updateProduct(@RequestHeader(name="X-AUTH-TOKEN") String token,
+                                                 @RequestBody UpdateProductForm form) {
+
+
+        return ResponseEntity.ok(ProductDto.from(productService.updateProduct(provider.getUserVo(token).getId(), form)));
+    }
+    @PutMapping("/item")
+    public ResponseEntity<ProductItemDto> updateProductItem(@RequestHeader(name="X-AUTH-TOKEN") String token,
+                                                     @RequestBody UpdateProductItemForm form) {
+
+
+        return ResponseEntity.ok(ProductItemDto.from(productItemService.updateProductItem(provider.getUserVo(token).getId(), form)));
     }
 }
