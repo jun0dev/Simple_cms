@@ -68,5 +68,12 @@ DELETE http://localhost:8082/seller/product/item?id=8
 Content-Type: application/json
 X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ6ZE4yb0ZYOTFXUW9WbG14cVdwWGdBaXB1RjczQVI4MmpNSnlRQUcyRjRjPSIsImp0aSI6IlJETko4ZFJTMGJGYmFEMHJZaDNQZ3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNzAxNDM5NTg5LCJleHAiOjE3MDE1MjU5ODl9.v_bNXddiNVS-Wv1Fh6-XmO15dYca8wVmrY6zAkNOgjQ
 
+### 상품 검색
+GET http://localhost:8082/search/product?name=nike
+Content-Type: application/json
 
+### 상품 디테일 검색
+GET http://localhost:8082/search/product/detail?productId=4
+Content-Type: application/json
+X-AUTH-TOKEN: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ6ZE4yb0ZYOTFXUW9WbG14cVdwWGdBaXB1RjczQVI4MmpNSnlRQUcyRjRjPSIsImp0aSI6IlJETko4ZFJTMGJGYmFEMHJZaDNQZ3c9PSIsInJvbGVzIjoiU0VMTEVSIiwiaWF0IjoxNzAxNDM5NTg5LCJleHAiOjE3MDE1MjU5ODl9.v_bNXddiNVS-Wv1Fh6-XmO15dYca8wVmrY6zAkNOgjQ
 
